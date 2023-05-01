@@ -1,6 +1,6 @@
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Container, Switch } from '@mui/material'
 
 interface IState {
@@ -25,10 +25,6 @@ export default function Home() {
       }),
     [mode]
   )
-
-  useEffect(() => {
-    console.log(number)
-  },[number])
 
   const modifyNum2 = (method: string) => {
     if ([...number.display].includes('.') && method === '.') return 
