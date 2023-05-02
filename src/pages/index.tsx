@@ -116,7 +116,7 @@ export default function Home() {
           <h1 className='font-bold text-4xl'>{mode.toUpperCase()} MODE</h1>
           <Switch onChange={() => setMode(mode === 'light' ? 'dark' : 'light')} className='scale-150'/>
           <div className='w-full h-full flex justify-center mt-5'>
-            <div className='scale-75 flex flex-col items-center w-fit'>
+            <div className='scale-75 lg:scale-100 xl:scale-150 flex flex-col items-center w-fit'>
               <div className='w-full h-[150px] px-1'>
                 <h1 className='text-right text-8xl'>{number.showResult ? number.result : number.display}</h1>
               </div>
