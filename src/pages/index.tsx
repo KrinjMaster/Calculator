@@ -115,12 +115,12 @@ export default function Home() {
         <div className='flex flex-col items-center transition-colors duration-500 ease-in-out'>
           <h1 className='font-bold text-4xl'>{mode.toUpperCase()} MODE</h1>
           <Switch onChange={() => setMode(mode === 'light' ? 'dark' : 'light')} className='scale-150'/>
-          <div className='w-full h-full flex justify-center mt-5'>
-            <div className='scale-75 lg:scale-100 xl:scale-120 2xl:scale-150 flex flex-col items-center w-fit'>
+          <div className='w-screen h-screen flex justify-center align-middle'>
+            <div className='scale-75 2xl:scale-120 flex flex-col items-center w-fit'>
               <div className='w-full h-[150px] px-1'>
                 <h1 className='text-right text-8xl'>{number.showResult ? number.result : number.display}</h1>
               </div>
-              <div className='grid grid-cols-4 item-2 justify-center items-center gap-1 w-[340px] text-3xl m-1 '>
+              <div className='grid grid-cols-4 item-2 justify-center items-center gap-1 w-[340px] text-3xl m-1 m-auto'>
                 <button onClick={() => modifyNum('ac')} className={`w-20 h-20 rounded-full ${mode === 'dark' ? `bg-[#D4D4D2]` : `bg-[#505050]`}  ${mode === 'dark' ? `text-black` : `text-white`}`}>AC</button>
                 <button onClick={() => modifyNum('-')} className={`w-20 h-20 rounded-full bg-[${mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light}]  ${mode === 'dark' ? `text-black` : `text-white`}`}>+/-</button>
                 <button onClick={() => modifyNum('%')} className={`w-20 h-20 rounded-full bg-[${mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light}] text-${mode === 'dark' ? `black` : `white`}`}>%</button>
