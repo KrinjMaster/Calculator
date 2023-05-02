@@ -121,7 +121,7 @@ export default function Home() {
                 <h1 className='text-right text-8xl'>{number.showResult ? number.result : number.display}</h1>
               </div>
               <div className='grid grid-cols-4 item-2 justify-center items-center gap-1 w-[340px] text-3xl m-1 '>
-                <button onClick={() => modifyNum('ac')} className={`w-20 h-20 rounded-full bg-[${mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light}]  ${mode === 'dark' ? `text-black` : `text-white`}`}>AC</button>
+                <button onClick={() => modifyNum('ac')} className={`w-20 h-20 rounded-full ${mode === 'dark' ? `bg-[#D4D4D2]` : `bg-[#505050]`}  ${mode === 'dark' ? `text-black` : `text-white`}`}>AC</button>
                 <button onClick={() => modifyNum('-')} className={`w-20 h-20 rounded-full bg-[${mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light}]  ${mode === 'dark' ? `text-black` : `text-white`}`}>+/-</button>
                 <button onClick={() => modifyNum('%')} className={`w-20 h-20 rounded-full bg-[${mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light}] text-${mode === 'dark' ? `black` : `white`}`}>%</button>
                 <button onClick={() => modifyNum2('/')} className='w-20 h-20 -2 rounded-full bg-[#FF9500] -[#FF9500]'>÷</button>
